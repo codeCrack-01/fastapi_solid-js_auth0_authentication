@@ -24,7 +24,7 @@ SampleApp/
         │   ├── App.tsx   # Main application
         │   └── index.tsx # Entry point
         └── package.json  # Node.js dependencies
-```
+
 
 ## Setup Instructions
 
@@ -95,6 +95,9 @@ SampleApp/
 - Responsive Bootstrap styling
 - Error handling for authentication failures
 - Token-based API access
+
+### How to run quickly:
+You can run this project directly from terminal by the ```start.sh``` file in the main directory, or you can run separately for the frontend and the backend folder. 
 
 ## Troubleshooting
 
