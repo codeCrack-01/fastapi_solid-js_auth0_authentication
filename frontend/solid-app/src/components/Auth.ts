@@ -5,10 +5,10 @@ let auth0: Auth0Client;
 
 export async function initAuth() {
   auth0 = await createAuth0Client({
-    domain: "your-domain.auth0.com",
-    client_id: "your-client-id",
+    domain: "order-one.eu.auth0.com",
+    client_id: "9Q3ElhMz7cvBidV5TfwcQ2IkE2InFCA4",
     redirect_uri: window.location.origin,
-    audience: "your-api-identifier",
+    audience: "https://apithreats.com/solid-apis",
   });
 
   if (
