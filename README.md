@@ -1,4 +1,4 @@
-# OrderOne Authentication App
+# SampleApp Authentication App
 
 This is a simple authentication example application using:
 - **Backend**: FastAPI with Auth0 JWT validation
@@ -7,7 +7,7 @@ This is a simple authentication example application using:
 ## Project Structure
 
 ```
-OrderOne/
+SampleApp/
 ├── .env.example          # Example environment variables
 ├── backend/              # FastAPI backend
 │   └── fastapi/          # FastAPI app
@@ -17,6 +17,7 @@ OrderOne/
 └── frontend/             # SolidJS frontend
     └── solid-app/        # SolidJS application
         ├── src/          # Source code
+```
         │   ├── components/ # Components
         │   │   ├── Auth.ts # Auth0 authentication
         │   │   └── Protected.tsx # Protected component
@@ -31,7 +32,7 @@ OrderOne/
 
 1. Navigate to the backend directory:
    ```
-   cd OrderOne/backend/fastapi
+   cd SampleApp/backend/fastapi
    ```
 
 2. Create and activate a virtual environment:
@@ -60,7 +61,7 @@ OrderOne/
 
 1. Navigate to the frontend directory:
    ```
-   cd OrderOne/frontend/solid-app
+   cd SampleApp/frontend/solid-app
    ```
 
 2. Install dependencies:

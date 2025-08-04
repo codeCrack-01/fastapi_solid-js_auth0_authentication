@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to start the SolidJS frontend app
+# Script to start the SampleApp SolidJS frontend app
 
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then
@@ -31,5 +31,5 @@ if ! grep -q '"bootstrap"' package.json; then
 fi
 
 # Start the development server
-echo "Starting development server..."
+echo "Starting SampleApp frontend development server..."
 npm run dev -- --host 0.0.0.0

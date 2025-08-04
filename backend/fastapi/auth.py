@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN", "order-one.eu.auth0.com")
-API_AUDIENCE = os.getenv("AUTH0_API_AUDIENCE", "https://apithreats.com/solid-apis")
+AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN", "your-tenant.auth0.com")
+API_AUDIENCE = os.getenv("AUTH0_API_AUDIENCE", "https://api.example.com/api")
 ALGORITHMS = ["RS256"]
 JWKS_URL = f"https://{AUTH0_DOMAIN}/.well-known/jwks.json"
 

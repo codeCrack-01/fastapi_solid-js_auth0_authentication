@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to start the FastAPI backend server
+# Script to start the SampleApp FastAPI backend server
 
 # Check if Python is installed
 if ! command -v python3 &> /dev/null; then
@@ -30,12 +30,12 @@ if [ ! -f ".env" ]; then
         echo "Created .env file from example. Please update with your Auth0 credentials."
     else
         echo "Error: Could not find .env.example file. Please create a .env file manually."
-        echo "AUTH0_DOMAIN=your-domain.auth0.com" > .env
-        echo "AUTH0_API_AUDIENCE=your-audience" >> .env
+        echo "AUTH0_DOMAIN=your-tenant.auth0.com" > .env
+        echo "AUTH0_API_AUDIENCE=https://api.example.com/api" >> .env
         echo "ALLOWED_ORIGINS=http://localhost:5173" >> .env
     fi
 fi
 
 # Start the FastAPI server
-echo "Starting FastAPI server..."
+echo "Starting SampleApp FastAPI server..."
 uvicorn main:app --reload --host 0.0.0.0 --port 8000

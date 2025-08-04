@@ -15,11 +15,11 @@ export const [authError, setAuthError] = createSignal<string | null>(null);
 
 // Auth0 configuration
 const config = {
-  domain: "order-one.eu.auth0.com",
-  clientId: "9Q3ElhMz7cvBidV5TfwcQ2IkE2InFCA4",
+  domain: "your-tenant.auth0.com",
+  clientId: "your-client-id",
   authorizationParams: {
     redirect_uri: window.location.origin,
-    audience: "https://apithreats.com/solid-apis",
+    audience: "https://api.example.com/api",
   },
   cacheLocation: "localstorage" as "localstorage" | "memory",
 };

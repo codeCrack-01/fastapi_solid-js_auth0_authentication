@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# OrderOne Application Startup Script
+# SampleApp Application Startup Script
 
 # Set colors for output
 GREEN='\033[0;32m'
@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 # Print header
 echo -e "${GREEN}========================================${NC}"
-echo -e "${GREEN}   OrderOne Application Startup Script   ${NC}"
+echo -e "${GREEN}   SampleApp Application Startup Script   ${NC}"
 echo -e "${GREEN}========================================${NC}"
 
 # Check if tmux is installed
@@ -61,8 +61,8 @@ if [ ! -f "$BACKEND_DIR/.env" ]; then
 fi
 
 # Create a new tmux session
-echo -e "${GREEN}Starting OrderOne application in tmux session...${NC}"
-SESSION_NAME="orderone"
+echo -e "${GREEN}Starting SampleApp application in tmux session...${NC}"
+SESSION_NAME="sampleapp"
 
 # Kill existing session if it exists
 tmux kill-session -t $SESSION_NAME 2>/dev/null
@@ -74,7 +74,7 @@ tmux new-session -d -s $SESSION_NAME -n "Backend" "cd $BACKEND_DIR && ./start.sh
 tmux new-window -t $SESSION_NAME:1 -n "Frontend" "cd $FRONTEND_DIR && ./start.sh; bash"
 
 # Display info
-echo -e "${GREEN}OrderOne application started in tmux session: $SESSION_NAME${NC}"
+echo -e "${GREEN}SampleApp application started in tmux session: $SESSION_NAME${NC}"
 echo -e "${YELLOW}To attach to the session, run: tmux attach-session -t $SESSION_NAME${NC}"
 echo -e "${YELLOW}To switch between windows: Ctrl+B then window number (0 for Backend, 1 for Frontend)${NC}"
 echo -e "${YELLOW}To detach from session: Ctrl+B then D${NC}"

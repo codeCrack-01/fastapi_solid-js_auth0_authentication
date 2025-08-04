@@ -9,7 +9,7 @@ load_dotenv()
 
 # Create FastAPI app with metadata
 app = FastAPI(
-    title="Order One API",
+    title="SampleApp API",
     description="Authentication protected API with Auth0",
     version="1.0.0"
 )
@@ -26,7 +26,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Order One API. Use /api/protected for authenticated routes."}
+    return {"message": "Welcome to SampleApp API. Use /api/protected for authenticated routes."}
 
 @app.get("/api/protected")
 async def protected_route(user=Depends(verify_jwt)):
