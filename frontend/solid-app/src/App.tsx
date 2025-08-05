@@ -76,10 +76,13 @@ export default function App() {
 
         <div class="p-4 mb-4 bg-light rounded-3">
           <div class="container-fluid py-5">
-            <h1 class="display-5 fw-bold">SolidJS + Auth0 + FastAPI</h1>
+            <h1 class="display-5 fw-bold">
+              SolidJS + FastAPI + Auth0 + Supabase
+            </h1>
             <p class="col-md-8 fs-4">
               This is a sample application demonstrating authentication with
-              Auth0 in a SolidJS and FastAPI application.
+              Auth0 in a SolidJS and FastAPI application, integrated with
+              Supabase.
             </p>
             <Show when={!isAuthenticated() && !isLoading()}>
               <button class="btn btn-primary btn-lg" onClick={() => login()}>
