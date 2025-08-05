@@ -46,9 +46,12 @@ SampleApp/
    pip install -r requirements.txt
    ```
 
-4. Copy the `.env.example` file to `.env` and update with your Auth0 credentials:
+4. Following are the env file variables:
    ```
-   cp ../../.env.example .env
+   FRONTEND:
+       VITE_AUTH0_DOMAIN, VITE_AUTH0_CLIENT_ID ,VITE_AUTH0_AUDIENCE
+   BACKEND:
+       AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_API_AUDIENCE
    ```
 
 5. Run the FastAPI server:
