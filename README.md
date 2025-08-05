@@ -1,4 +1,4 @@
-# OrderOne Authentication App
+# ${PROJECT_NAME} Authentication App
 
 This is a simple authentication example application using:
 - **Backend**: FastAPI with Auth0 JWT validation
@@ -7,7 +7,8 @@ This is a simple authentication example application using:
 ## Project Structure
 
 ```
-OrderOne/
+${PROJECT_NAME}/
+├── .env                  # Environment variables including PROJECT_NAME
 ├── .env.example          # Example environment variables
 ├── backend/              # FastAPI backend
 │   └── fastapi/          # FastAPI app
@@ -18,6 +19,7 @@ OrderOne/
     └── solid-app/        # SolidJS application
         ├── src/          # Source code
         │   ├── components/ # Components
+```
         │   │   ├── Auth.ts # Auth0 authentication
         │   │   └── Protected.tsx # Protected component
         │   ├── App.tsx   # Main application
@@ -31,7 +33,7 @@ OrderOne/
 
 1. Navigate to the backend directory:
    ```
-   cd OrderOne/backend/fastapi
+   cd ${PROJECT_NAME}/backend/fastapi
    ```
 
 2. Create and activate a virtual environment:
@@ -60,7 +62,7 @@ OrderOne/
 
 1. Navigate to the frontend directory:
    ```
-   cd OrderOne/frontend/solid-app
+   cd ${PROJECT_NAME}/frontend/solid-app
    ```
 
 2. Install dependencies:
@@ -85,7 +87,17 @@ OrderOne/
    - Set the allowed web origins to include your frontend URL
 4. Update the Auth0 configuration in the following files:
    - `frontend/solid-app/src/components/Auth.ts` - Update domain and clientId
-   - `.env` file with the correct values
+   - `.env` file with the correct values including PROJECT_NAME
+
+## Environment Variables
+
+The following environment variables should be set in your `.env` file:
+
+- `PROJECT_NAME` - The name of your project (defaults to "OrderOne" if not set)
+- `AUTH0_DOMAIN` - Your Auth0 domain
+- `AUTH0_API_AUDIENCE` - Your Auth0 API audience
+- `AUTH0_CLIENT_ID` - Your Auth0 client ID
+- `ALLOWED_ORIGINS` - Comma-separated list of allowed origins for CORS
 
 ## Features
 

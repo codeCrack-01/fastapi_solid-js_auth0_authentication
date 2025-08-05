@@ -23,7 +23,9 @@ export default function App() {
     <div class="container py-4">
       <header class="pb-3 mb-4 border-bottom">
         <div class="d-flex align-items-center justify-content-between">
-          <h1 class="h3 mb-0 text-primary">OrderOne Authentication</h1>
+          <h1 class="h3 mb-0 text-primary">
+            {import.meta.env.VITE_PROJECT_NAME || "MyProject"} Authentication
+          </h1>
           <Show
             when={isAuthenticated()}
             fallback={
@@ -98,7 +100,8 @@ export default function App() {
       </main>
 
       <footer class="pt-3 mt-4 text-muted border-top">
-        &copy; {new Date().getFullYear()} OrderOne App
+        &copy; {new Date().getFullYear()}{" "}
+        {import.meta.env.VITE_PROJECT_NAME || "MyProject"} App
       </footer>
     </div>
   );

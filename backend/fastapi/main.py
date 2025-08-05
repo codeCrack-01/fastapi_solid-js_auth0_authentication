@@ -8,8 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Create FastAPI app with metadata
+project_name = os.getenv("PROJECT_NAME")
 app = FastAPI(
-    title="OrderOne API",
+    title=f"{project_name} API",
     description="Authentication protected API with Auth0",
     version="1.0.0"
 )
@@ -27,7 +28,8 @@ app.add_middleware(
 # Routes
 @app.get("/")
 async def root():
-    return {"message": "Welcome to OrderOne API. Use /api/protected for authenticated routes."}
+    project_name = os.getenv("PROJECT_NAME")
+    return {"message": f"Welcome to {project_name} API. Use /api/protected for authenticated routes."}
 
 @app.get("/api/protected")
 async def protected_route(user=Depends(verify_jwt)):
