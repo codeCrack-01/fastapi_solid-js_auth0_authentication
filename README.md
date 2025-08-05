@@ -1,25 +1,25 @@
-# ${PROJECT_NAME} Authentication App
+# ${PROJECT_NAME} Authentication Web App
 
-This is a simple authentication example application using:
-- **Backend**: FastAPI with Auth0 JWT validation
-- **Frontend**: SolidJS with Auth0 authentication and Bootstrap styling
+This is a modern authentication example application using:
+- **Backend**: FastAPI
+- **Frontend**: Solid-JS
+- **Authentication**: Auht0 with Supabase Integration
 
 ## Project Structure
 
 ```
 ${PROJECT_NAME}/
 ├── .env                  # Environment variables including PROJECT_NAME
-├── .env.example          # Example environment variables
 ├── backend/              # FastAPI backend
 │   └── fastapi/          # FastAPI app
 │       ├── auth.py       # Auth0 JWT validation
 │       ├── main.py       # API endpoints
+|       ├── databse.py    # Supabase Setup
 │       └── requirements.txt # Python dependencies
 └── frontend/             # SolidJS frontend
     └── solid-app/        # SolidJS application
         ├── src/          # Source code
         │   ├── components/ # Components
-```
         │   │   ├── Auth.ts # Auth0 authentication
         │   │   └── Protected.tsx # Protected component
         │   ├── App.tsx   # Main application
@@ -98,6 +98,7 @@ The following environment variables should be set in your `.env` file:
 - `AUTH0_API_AUDIENCE` - Your Auth0 API audience
 - `AUTH0_CLIENT_ID` - Your Auth0 client ID
 - `ALLOWED_ORIGINS` - Comma-separated list of allowed origins for CORS
+- `SUPABASE_SERVICE_ROLE_KEY` and `SUPABASE_URL`
 
 ## Features
 
