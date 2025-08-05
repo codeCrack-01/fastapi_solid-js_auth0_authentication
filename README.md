@@ -47,11 +47,6 @@ ${PROJECT_NAME}/
    pip install -r requirements.txt
    ```
 
-4. Copy the `.env.example` file to `.env` and update with your Auth0 credentials:
-   ```
-   cp ../../.env.example .env
-   ```
-
 5. Run the FastAPI server:
    ```
    uvicorn main:app --reload
@@ -93,12 +88,18 @@ ${PROJECT_NAME}/
 
 The following environment variables should be set in your `.env` file:
 
+### Backend
 - `PROJECT_NAME` - The name of your project (defaults to "OrderOne" if not set)
 - `AUTH0_DOMAIN` - Your Auth0 domain
 - `AUTH0_API_AUDIENCE` - Your Auth0 API audience
 - `AUTH0_CLIENT_ID` - Your Auth0 client ID
 - `ALLOWED_ORIGINS` - Comma-separated list of allowed origins for CORS
 - `SUPABASE_SERVICE_ROLE_KEY` and `SUPABASE_URL`
+### Frontend
+- VITE_PROJECT_NAME=OrderOne
+- VITE_AUTH0_DOMAIN=order-one.eu.auth0.com
+- VITE_AUTH0_CLIENT_ID=9Q3ElhMz7cvBidV5TfwcQ2IkE2InFCA4
+- VITE_AUTH0_AUDIENCE=https://apithreats.com/solid-apis
 
 ## Features
 
